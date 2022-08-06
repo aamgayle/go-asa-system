@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+//TODO: Define student course access
+service StudentCourses {
+
+}
+
+//TODO: Define professor course access
+service ProfessorCourses {
+
+}
+
+message Courses {
+  int32 id = 1;
+  string courseName = 2;
+  int32 roomNumber = 3;
+  int32 pID = 4;
+  google.protobuf.Timestamp timeWindow = 5;
+  repeated uint32 studentIDs = 6;
+}
